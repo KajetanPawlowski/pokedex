@@ -6,7 +6,7 @@ import "./index.css";
 
 import Root from "./routes/Root.js"
 import FrontPage from "./routes/FrontPage.js"
-import AboutMe from "./routes/AboutMe.js"
+import About from "./routes/About.js"
 
 const router = createHashRouter([
   {
@@ -19,7 +19,7 @@ const router = createHashRouter([
         },
         {
             path: "/about",
-            element: <AboutMe />,
+            element: <About />,
         },
     ],
 },
