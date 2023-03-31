@@ -1,6 +1,6 @@
-import App from "../App.js";
+import PokedexDisplay from "../PokedexDisplay"
 
 
 export default function FrontPage() {
-    return <h1> FrontPage</h1>
+    return <PokedexDisplay />
 }
