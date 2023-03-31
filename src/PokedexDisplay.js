@@ -10,6 +10,27 @@ export default function PokedexDisplay() {
         <PokemonBox />
         <PokemonBox />
         <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        <PokemonBox />
+        
     </div>
     );
 }
