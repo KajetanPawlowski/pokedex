@@ -3,7 +3,7 @@ import "./frontpage.css";
 import PokemonBox from "./PokemonBox";
 
 export default function PokedexDisplay() {
-    return(<div className="pokedexDisplay">
+    return(<div id="display"    className="pokedexDisplay">
         <PokemonBox />
         <PokemonBox />
         <PokemonBox />
