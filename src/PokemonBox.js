@@ -18,9 +18,10 @@ export default function PokemonBox(name) {
           })
           .catch(error => console.error(error));
       }, []);
+      console.log(pokemonType)
     return(
-            <div className={pokemonType} > 
-                <h3 className="nameLabel">{pokemonName}</h3>
+            <div className={`pokemonBox ${pokemonType}`}> 
+                <h3>{pokemonName}</h3>
                 <img src={pokemonPictureSrc}></img>
             </div>
     )

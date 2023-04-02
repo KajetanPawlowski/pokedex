@@ -7,27 +7,90 @@
   .pokemonBox {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-direction: row;
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 100px;
     margin: 10px;
     padding: 10px;
     border: 2px solid black;
     border-radius: 15px;
+    background-color: darkcyan;
   }
   
   .pokemonBox h3 {
     margin: 0;
-    float: left;
-    
+    text-align: left;
   }
   
   .pokemonBox img {
-    
     width: 100px;
     height: 100px;
     margin-right: 10px;
     border-radius: 50%;
+    order: 2;
   }
-  
+
+  .fire{
+    background-color: #FFA756;
+  }
+
+  .grass{
+    background-color: #8BBE8A;
+  }
+
+  .water{
+    background-color: #58ABF6;
+  }
+
+  .bug{
+    background-color: #8BD674;
+  }
+
+  .flying{
+    background-color: #8FA8DD;
+}
+
+.rock{
+    background-color: #C8C8A9;
+}
+
+.ground{
+    background-color: #F78551;
+}
+
+.electric{
+    background-color: #F7D02C;
+}
+
+.poison{
+    background-color: #9F6E97;
+}
+
+.ghost{
+    background-color: #8571BE;
+}
+
+.psychic{
+    background-color: #FF6568;
+}
+
+.ice{
+    background-color: #91D8DF;
+}
+
+.dragon{
+    background-color: #7383B9;
+}
+
+.dark{
+    background-color: #585761;
+}
+
+.steel{
+    background-color: #5A8EA1;
+}
+
+.fairy{
+    background-color: #EDB7E5;
+}
