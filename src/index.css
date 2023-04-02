@@ -20,7 +20,6 @@ code {
   justify-content: center;
   align-items: flex-end;
   color: whitesmoke;
-  padding: 1rem;
 }
 
 .navbar-link {
@@ -34,12 +33,6 @@ code {
   text-decoration: underline;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0;
-  padding: 2rem;
-  
-}
 
 h1 {
 
