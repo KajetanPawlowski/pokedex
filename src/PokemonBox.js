@@ -1,33 +1,35 @@
+import React, { useState, useEffect } from 'react';
+
 import "./frontpage.css";
 
+
+
 export default function PokemonBox(name) {
-    return
-        <div className={getPokemonType(name)} id={name}> 
-            <h3 className="nameLabel">{getPokemonName(name)}</h3>
-            <div className="pictureBox">{getPokemonPicture(name)}</div>
-        </div>
+    const [pokemonName, setPokemonName] = useState('');
+    const [pokemonType, setPokemonType] = useState('');
+    const [pokemonPictureSrc, setPokemonPic] = useState('');
+    useEffect(() => {
+        fetch('https://pokeapi.co/api/v2/pokemon/' + name.name)
+          .then(response => response.json())
+          .then(pokemon => {
+            setPokemonType(pokemon.types[0].type.name)
+            setPokemonName(pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1))
+            setPokemonPic(pokemon.sprites.front_default)
+          })
+          .catch(error => console.error(error));
+      }, []);
+    return(
+            <div className={pokemonType} > 
+                <h3 className="nameLabel">{pokemonName}</h3>
+                <img src={pokemonPictureSrc}></img>
+            </div>
+    )
 }
 
 
-function getPokemonName(name){
-    fetch("https://pokeapi.co/api/v2/pokemon/" +name.name)//name is an object !!!!
-    .then(response => {
-        if (response.ok) return response.json()
-        throw new Error("Network response was not OK")
-    })
-    .then(pokemon => console.log(pokemon.name))
-    .catch(err => console.log(err))
-}
 
-function getPokemonPicture(name){
-    fetch("https://pokeapi.co/api/v2/pokemon/" +name.name)//name is an object !!!!
-    .then(response => {
-        if (response.ok) return response.json()
-        throw new Error("Network response was not OK")
-    })
-    .then(pokemon => console.log(pokemon))
-    .catch(err => console.log(err))
-}
+
+
 
 function getPokemonType(name){
     fetch("https://pokeapi.co/api/v2/pokemon/" +name.name)//name is an object !!!!
@@ -35,7 +37,11 @@ function getPokemonType(name){
         if (response.ok) return response.json()
         throw new Error("Network response was not OK")
     })
-    .then(pokemon => {return (pokemon.types[0].type.name)})
+    .then(pokemon => updateType(pokemon))
     .catch(err => console.log(err))
+}
+
+function updateType(pokemon){
+    type = pokemon.types[0].type.name;
 }
 

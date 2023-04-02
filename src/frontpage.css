@@ -1,25 +1,33 @@
-.pokedexDisplay{
+.pokedexDisplay {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items:center;
-    padding: 1rem;
-    width: 780px;
-    background-color: bisque;
-}
-
-
-.pokeBox{
-    height: 60px;
-    width: 110px;
-    background-color: aquamarine;
+  }
+  
+  .pokemonBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 150px;
+    height: 150px;
     margin: 10px;
-}
-
-.electric {
-    background-color: yellow;
-}
-
-#display{
-    margin-left: 100px;
-    margin-right: auto;
-}
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+  }
+  
+  .pokemonBox h3 {
+    margin: 0;
+    float: left;
+    
+  }
+  
+  .pokemonBox img {
+    
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  
