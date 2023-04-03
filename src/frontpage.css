@@ -9,8 +9,8 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    width: 180px;
-    height: 100px;
+    width: 250px;
+    height: 80px;
     margin: 10px;
     padding: 10px;
     border: 2px solid black;
@@ -20,15 +20,22 @@
   
   .pokemonBox h3 {
     margin: 0;
+    margin-left: 10px;
     text-align: left;
   }
   
   .pokemonBox img {
     width: 100px;
-    height: 100px;
+    height: 80px;
     margin-right: 10px;
     border-radius: 50%;
     order: 2;
+  }
+  .pokemonBox p {
+    margin-left: 10px;
+    color: #585761;
+    font-size: small;
+
   }
 
   .fire{
