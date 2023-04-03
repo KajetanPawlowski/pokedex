@@ -1,5 +1,4 @@
 
-
 import React, { useState, useEffect } from 'react';
 import PokemonBox from './PokemonBox';
 import "./frontpage.css";
@@ -9,9 +8,11 @@ export default function PokedexDisplay() {
     const [currentPage, setCurrentPage] = useState(0);
     const [visiblePokemon, setVisiblePokemon] = useState([])
     const pokemonPerPage = 12;
-
+    
+    const startIndex = currentPage * pokemonPerPage;
+    const endIndex = startIndex + pokemonPerPage;
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=99')
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=96')
       .then(response => response.json())
       .then(data => {
         setPokemonData(data.results)
@@ -21,19 +22,16 @@ export default function PokedexDisplay() {
   }, []);
 
   const nextPage = () => {
-    setCurrentPage(currentPage + 1);
-    setVisiblePokemon(pokemonData.slice(startIndex, endIndex))
+      setCurrentPage(currentPage + 1);
+      setVisiblePokemon(pokemonData.slice(startIndex+pokemonPerPage, endIndex+pokemonPerPage))
+    
   };
 
   const prevPage = () => {
     setCurrentPage(currentPage - 1);
-    setVisiblePokemon(pokemonData.slice(startIndex, endIndex))
+    setVisiblePokemon(pokemonData.slice(startIndex-pokemonPerPage, endIndex-pokemonPerPage))
   };
 
-  const startIndex = currentPage * pokemonPerPage;
-  const endIndex = startIndex + pokemonPerPage;
-   
-  console.log(pokemonData)
 
   return (
     <div className="frontPage">
