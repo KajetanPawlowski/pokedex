@@ -41,6 +41,11 @@
     border-radius: 15px;
     background-color: darkcyan;
   }
+
+  .pokemonBox:hover{
+    opacity: 80%;
+    cursor: pointer;
+  }
   
   .pokemonBox h3 {
     margin: 0;
@@ -126,3 +131,5 @@
 .fairy{
     background-color: #EDB7E5;
 }
+
+

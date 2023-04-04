@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+import PokemonPage from './routes/PokemonPage';
 
 import "./frontpage.css";
 
@@ -9,7 +11,6 @@ export default function PokemonBox(name) {
     const [pokemonType, setPokemonType] = useState('');
     const [pokemonPictureSrc, setPokemonPic] = useState('');
 
-    console.log(name.id.name)
     useEffect(() => {
         fetch("https://pokeapi.co/api/v2/pokemon/"+ name.id.name)
           .then(response => response.json())
@@ -21,6 +22,7 @@ export default function PokemonBox(name) {
           .catch(error => console.error(error));
       }, []);
     return(
+              <Link to="/PokemonPage">
             <div className={`pokemonBox ${pokemonType}`}>
                 <div>
                 <p className='pokemonId'>#{name.id.url.split('/')[6]}</p>
@@ -28,7 +30,9 @@ export default function PokemonBox(name) {
                 </div>
                 <img src={pokemonPictureSrc}></img>
             </div>
+              </Link>
     )
 }
+
 
 
