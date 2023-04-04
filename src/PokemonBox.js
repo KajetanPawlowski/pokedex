@@ -21,7 +21,7 @@ export default function PokemonBox(name) {
           .catch(error => console.error(error));
       }, []);
     return(
-            <Link to="/details" className='link'> 
+            <Link to={`/details/${pokemonName.toLowerCase()}`} className='link'> 
               <div className={`pokemonBox ${pokemonType}`}>
                   <div>
                     <p className='pokemonId'>#{name.id.url.split('/')[6]}</p>
