@@ -23,7 +23,7 @@ export default function PokemonBox(name) {
     return(
             <div className={`pokemonBox ${pokemonType}`}>
                 <div>
-                <p>#{name.id.url.substring(34)}</p>
+                <p className='pokemonId'>#{name.id.url.split('/')[6]}</p>
                     <h3>{pokemonName}</h3>
                 </div>
                 <img src={pokemonPictureSrc}></img>

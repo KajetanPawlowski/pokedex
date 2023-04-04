@@ -56,6 +56,7 @@
     order: 2;
   }
   .pokemonBox p {
+    text-align: left;
     margin-left: 10px;
     color: #585761;
     font-size: small;

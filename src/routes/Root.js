@@ -1,11 +1,12 @@
 import { Link, Outlet } from "react-router-dom";
+import { resetDisplay } from "../PokedexDisplay";
 
 export default function Root() {
   return (
     <header>
-      <h1>Pokedex</h1>
+      <p>Pokedex</p>
       <nav className="navbar">
-        <Link to="/" className="navbar-link">
+        <Link to="/" className="navbar-link" onClick={resetDisplay}>
           Home
         </Link>
         <Link to="/about" className="navbar-link">
