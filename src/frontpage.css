@@ -3,6 +3,10 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+.link{
+    color: whitesmoke;
+    text-decoration: none;
+  }
 .displayButtons{
   display: flex;
   flex-wrap: wrap;

@@ -22,15 +22,15 @@ export default function PokemonBox(name) {
           .catch(error => console.error(error));
       }, []);
     return(
-              <Link to="/PokemonPage">
-            <div className={`pokemonBox ${pokemonType}`}>
-                <div>
-                <p className='pokemonId'>#{name.id.url.split('/')[6]}</p>
-                    <h3>{pokemonName}</h3>
-                </div>
-                <img src={pokemonPictureSrc}></img>
-            </div>
-              </Link>
+            <Link to="#routes/PokemonPage" className='link'> 
+              <div className={`pokemonBox ${pokemonType}`}>
+                  <div>
+                    <p className='pokemonId'>#{name.id.url.split('/')[6]}</p>
+                      <h3>{pokemonName}</h3>
+                  </div>
+                  <img src={pokemonPictureSrc}></img>
+              </div>
+            </Link>
     )
 }
 
