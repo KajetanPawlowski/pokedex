@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import PokemonBox from './PokemonBox';
 import "./frontpage.css";
@@ -32,12 +31,11 @@ export default function PokedexDisplay() {
     setVisiblePokemon(pokemonData.slice(startIndex-pokemonPerPage, endIndex-pokemonPerPage))
   };
 
-
   return (
     <div className="frontPage">
         <div className="pokedexDisplay">
             {visiblePokemon.map(pokemon => (
-                <PokemonBox key={pokemon.name} id={pokemon} />
+                 <PokemonBox key={pokemon.name} id={pokemon}/>
             ))}
         </div>
         <div className="displayButtons">
@@ -51,3 +49,4 @@ export default function PokedexDisplay() {
 export function resetDisplay(){
   setCurrentPage(0);
 }
+
