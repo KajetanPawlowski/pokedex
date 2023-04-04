@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import PokemonPage from './routes/PokemonPage';
 
 import "./frontpage.css";
 
@@ -22,7 +21,7 @@ export default function PokemonBox(name) {
           .catch(error => console.error(error));
       }, []);
     return(
-            <Link to="#routes/PokemonPage" className='link'> 
+            <Link to="/details" className='link'> 
               <div className={`pokemonBox ${pokemonType}`}>
                   <div>
                     <p className='pokemonId'>#{name.id.url.split('/')[6]}</p>
