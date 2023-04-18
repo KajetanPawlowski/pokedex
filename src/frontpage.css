@@ -1,8 +1,16 @@
+.frontPage{
+  justify-content: center;
+}
+
 .pokedexDisplay {
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 1100px;
+
   }
+
 .link{
     color: whitesmoke;
     text-decoration: none;
@@ -11,6 +19,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 
 .displayButtons button {
