@@ -49,3 +49,13 @@ header p {
   text-align: center;
   margin-bottom: 0;
 }
+
+.aboutpage {
+  margin: auto;
+  width: 1100px;
+}
+
+.aboutpage p{
+  font-size:15px;
+  text-align: justify;
+}
