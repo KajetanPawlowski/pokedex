@@ -44,7 +44,7 @@ export default function PokemonCard() {
           </ul>
         </div>
       </div>
-      <Link to="/">
+      <Link to="/" >
         <button className="goBackBtn">Go Back</button>
       </Link>
     </div>
