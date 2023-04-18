@@ -47,6 +47,6 @@ export default function PokedexDisplay() {
 }
 
 export function resetDisplay(){
-  setCurrentPage(0);
+  
 }
 
